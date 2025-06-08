@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<factura xmlns="http://www.sri.gob.ec" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="comprobante" version="2.1.0" xsi:schemaLocation="http://www.sri.gob.ec http://www.sri.gob.ec/xsd/factura_v2.1.0.xsd">
+<factura xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="comprobante" version="2.0.0" xsi:noNamespaceSchemaLocation="factura_V2.0.0.xsd">
       
     <infoTributaria>
             
@@ -13,7 +13,7 @@
             
         <ruc>1719284752001</ruc>
             
-        <claveAcceso>0206202501171928475200110010010000001231424764611</claveAcceso>
+        <claveAcceso>0206202501171928475200110010010000000013808322710</claveAcceso>
             
         <codDoc>01</codDoc>
             
@@ -21,7 +21,7 @@
             
         <ptoEmi>001</ptoEmi>
             
-        <secuencial>000000123</secuencial>
+        <secuencial>000000001</secuencial>
             
         <dirMatriz>Av. Principal 123</dirMatriz>
           
@@ -50,6 +50,8 @@
                 <codigo>2</codigo>
                         
                 <codigoPorcentaje>2</codigoPorcentaje>
+                        
+                <tarifa>12.00</tarifa>
                         
                 <baseImponible>100.00</baseImponible>
                         
@@ -130,14 +132,14 @@
                     <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
                 </Transforms>
                 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                <DigestValue>DQVugzlUQqf7B6qXn86jgmodXjWRuzCaaaL0iV2Qq6k=</DigestValue>
+                <DigestValue>adjfcU0pnU464FNB/zBoMhpCcVEBHpdlRQ9d/A25b+U=</DigestValue>
             </Reference>
         </SignedInfo>
-        <SignatureValue>E+ECu0W693t/oJA/fUUmL9I2FgT2kTgn2/x2k6GAMWwCNOn+t7/F0mlVNsuJvuWgGKVCQaxYZmYK&#13;
-mOZqizC+pWTIhjMjYcPeQc3Hh0OCgYt0cfQvQ2F0X42AJOYKNKO8lzEbET0grvz3t7+4k9OfOYLq&#13;
-DM1HO5CbCMfLrpQOAZ0qyZ9r2/LKO+hxgVKOtsTJNAVInkUHgubsQ1/zivbyXbxKGVcuWigZx2WN&#13;
-HToBXaY5PlqUb2gAwSrCFgjdZM3H2wE3iwy9RcFV+FjDlcMupkBR+FbIiVgy3Aq17X42VtG2YaB3&#13;
-zQFSPSQg2n3Y2YStUICtteIwdfMb+0E4Vz5uYg==</SignatureValue>
+        <SignatureValue>X7ql/h5MqcB4oAz68AHngR1e+LI0igJB9qGDya4LckTe1mkTtHAPrSdN7xYwviCGxJMDkBKgs4+F&#13;
+oE3Xs6HxcDnOrcYK8GmGPphYumwgZSkFE0ypB6m30VO/yJyVrpIb1zu+5nM6nHq5uqlxUqOEymlX&#13;
+39rwPKgO9BCuwP0FYHAs4EAiA8jmoXL2YsM5WI3kfCBjwDk0tTwG3F9YbrZdiwn7upTpprnPVAMw&#13;
+ThEORP4N8dvqbhpL1MJzCvzSq5u4dyCkUWA6oSN2xHensNBrDuws51JcEaltvhPViIWBkaKTtIJg&#13;
++3rBHx6Ag00YdJjTPgIf5CcceozgTe+/Nc0+iw==</SignatureValue>
         <KeyInfo>
             <X509Data>
                 <X509Certificate>MIIJTjCCBzagAwIBAgIIJkW2GNGVIRkwDQYJKoZIhvcNAQELBQAwgbgxCzAJBgNVBAYTAkVTMUQw&#13;
