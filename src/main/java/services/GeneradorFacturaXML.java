@@ -80,7 +80,7 @@ public class GeneradorFacturaXML {
             totalConImpuestos.appendChild(totalImpuesto);
             crearElemento(doc, totalImpuesto, "codigo", "2");
             crearElemento(doc, totalImpuesto, "codigoPorcentaje", "2");
-            crearElemento(doc, totalImpuesto, "tarifa", "12.00");
+            crearElemento(doc, totalImpuesto, "tarifa", "15");
             crearElemento(doc, totalImpuesto, "baseImponible", "100.00");
             crearElemento(doc, totalImpuesto, "valor", "12.00");
 

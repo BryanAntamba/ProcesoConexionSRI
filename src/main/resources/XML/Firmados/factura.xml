@@ -13,7 +13,7 @@
             
         <ruc>1719284752001</ruc>
             
-        <claveAcceso>0206202501171928475200110010010000000013808322710</claveAcceso>
+        <claveAcceso>0206202501171928475200110010010000000017578699017</claveAcceso>
             
         <codDoc>01</codDoc>
             
@@ -51,7 +51,7 @@
                         
                 <codigoPorcentaje>2</codigoPorcentaje>
                         
-                <tarifa>12.00</tarifa>
+                <tarifa>15</tarifa>
                         
                 <baseImponible>100.00</baseImponible>
                         
@@ -132,14 +132,14 @@
                     <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
                 </Transforms>
                 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                <DigestValue>adjfcU0pnU464FNB/zBoMhpCcVEBHpdlRQ9d/A25b+U=</DigestValue>
+                <DigestValue>UjWPkWt0AHRui44n/vULl0ewxUsrCRIQ22UQvlBeWRE=</DigestValue>
             </Reference>
         </SignedInfo>
-        <SignatureValue>X7ql/h5MqcB4oAz68AHngR1e+LI0igJB9qGDya4LckTe1mkTtHAPrSdN7xYwviCGxJMDkBKgs4+F&#13;
-oE3Xs6HxcDnOrcYK8GmGPphYumwgZSkFE0ypB6m30VO/yJyVrpIb1zu+5nM6nHq5uqlxUqOEymlX&#13;
-39rwPKgO9BCuwP0FYHAs4EAiA8jmoXL2YsM5WI3kfCBjwDk0tTwG3F9YbrZdiwn7upTpprnPVAMw&#13;
-ThEORP4N8dvqbhpL1MJzCvzSq5u4dyCkUWA6oSN2xHensNBrDuws51JcEaltvhPViIWBkaKTtIJg&#13;
-+3rBHx6Ag00YdJjTPgIf5CcceozgTe+/Nc0+iw==</SignatureValue>
+        <SignatureValue>WUN44s4cHUuEoRi4C5i+50Co52nTepid+0JOOftkUkZ5dh98mzM93uSmhUT6HAhXcqsUrmT7g1nT&#13;
+/bYAgt8oPrqmEP5pv/jrQZb12KJRmhRpWv/vvJMZ/+OYxCKD1KYcSRZDD4H+6TqwOyQyjJTbw3eC&#13;
+SBEXTtobOlVkqn5Uo00ZBTQb8LHBgyQ7C5F38FrJxlNDsF/LT6+9t2qRTkXKy9I9riS1q7OqOAud&#13;
+q5fLfWZC2b4Y3/V240zKmorMGLQlmBPS4YUfdCu0eqOrs7NJj5y4PqG1L2ooP2rkSigfDXetJWJu&#13;
+xCQrelGIpL/KWVeOH/StX+t2lEwdRQQv5CvHrA==</SignatureValue>
         <KeyInfo>
             <X509Data>
                 <X509Certificate>MIIJTjCCBzagAwIBAgIIJkW2GNGVIRkwDQYJKoZIhvcNAQELBQAwgbgxCzAJBgNVBAYTAkVTMUQw&#13;

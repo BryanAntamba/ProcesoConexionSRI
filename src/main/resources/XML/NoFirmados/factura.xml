@@ -6,7 +6,7 @@
     <razonSocial>Mi Empresa S.A.</razonSocial>
     <nombreComercial>Mi Empresa</nombreComercial>
     <ruc>1719284752001</ruc>
-    <claveAcceso>0206202501171928475200110010010000000013808322710</claveAcceso>
+    <claveAcceso>0206202501171928475200110010010000000017578699017</claveAcceso>
     <codDoc>01</codDoc>
     <estab>001</estab>
     <ptoEmi>001</ptoEmi>
@@ -25,7 +25,7 @@
       <totalImpuesto>
         <codigo>2</codigo>
         <codigoPorcentaje>2</codigoPorcentaje>
-        <tarifa>12.00</tarifa>
+        <tarifa>15</tarifa>
         <baseImponible>100.00</baseImponible>
         <valor>12.00</valor>
       </totalImpuesto>
