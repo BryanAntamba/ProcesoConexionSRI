@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<factura xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="comprobante" version="2.0.0" xsi:noNamespaceSchemaLocation="factura_V2.0.0.xsd">
+<factura xmlns="http://www.sri.gob.ec" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="comprobante" version="2.1.0" xsi:schemaLocation="http://www.sri.gob.ec http://www.sri.gob.ec/xsd/factura_v2.1.0.xsd">
       
     <infoTributaria>
             
@@ -13,7 +13,7 @@
             
         <ruc>1719284752001</ruc>
             
-        <claveAcceso>0206202501171928475200110010010000000012499853815</claveAcceso>
+        <claveAcceso>0206202501171928475200110010010000001231424764611</claveAcceso>
             
         <codDoc>01</codDoc>
             
@@ -21,7 +21,7 @@
             
         <ptoEmi>001</ptoEmi>
             
-        <secuencial>000000001</secuencial>
+        <secuencial>000000123</secuencial>
             
         <dirMatriz>Av. Principal 123</dirMatriz>
           
@@ -49,21 +49,17 @@
                         
                 <codigo>2</codigo>
                         
-                <codigoPorcentaje>5</codigoPorcentaje>
-                        
-                <descuentoAdicional>0.00</descuentoAdicional>
+                <codigoPorcentaje>2</codigoPorcentaje>
                         
                 <baseImponible>100.00</baseImponible>
                         
-                <tarifa>15</tarifa>
-                        
-                <valor>15.00</valor>
+                <valor>12.00</valor>
                       
             </totalImpuesto>
                 
         </totalConImpuestos>
             
-        <importeTotal>115.00</importeTotal>
+        <importeTotal>112.00</importeTotal>
             
         <moneda>DOLAR</moneda>
             
@@ -73,7 +69,7 @@
                         
                 <formaPago>01</formaPago>
                         
-                <total>115.00</total>
+                <total>112.00</total>
                       
             </pago>
                 
@@ -103,13 +99,13 @@
                               
                     <codigo>2</codigo>
                               
-                    <codigoPorcentaje>5</codigoPorcentaje>
+                    <codigoPorcentaje>2</codigoPorcentaje>
                               
-                    <tarifa>15</tarifa>
+                    <tarifa>12.00</tarifa>
                               
                     <baseImponible>100.00</baseImponible>
                               
-                    <valor>15.00</valor>
+                    <valor>12.00</valor>
                             
                 </impuesto>
                       
@@ -134,14 +130,14 @@
                     <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
                 </Transforms>
                 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                <DigestValue>UkDEnH8LJT2I/GWQjnfozOtv+T77ezTNtHvcHjAySjM=</DigestValue>
+                <DigestValue>DQVugzlUQqf7B6qXn86jgmodXjWRuzCaaaL0iV2Qq6k=</DigestValue>
             </Reference>
         </SignedInfo>
-        <SignatureValue>F0vaAD1t0PFGRjIJSaDez4NXDNUn0EKcsd0jQ5WN6oytI+s0SBkSHrp8QSBCiuUV5ep59ginlWbV&#13;
-rgu4TmMgyCVC+1OH1Yeo1sbivc0bw6gvsgJLnjJx5lZe0uhWAop9jMA8ERbS2fQu3duX2Zl1/rC/&#13;
-f89M+R0PfSg4hZWClO+I9yZBU4+xhkfRsUWyMASkHbwJy63W3alvXuC8FCeteU3SMd5LSMbLSdJh&#13;
-uOPcasUrBnsnLP33S6Gf4/aFsSChWJvGy6oXlN+wcmqSSnxDbFmlgW8+q/rwjATcDJhDVT/Lzplf&#13;
-OgEwq1IISqd+mwsPcSp/zRVHROVYRPu2ii61wQ==</SignatureValue>
+        <SignatureValue>E+ECu0W693t/oJA/fUUmL9I2FgT2kTgn2/x2k6GAMWwCNOn+t7/F0mlVNsuJvuWgGKVCQaxYZmYK&#13;
+mOZqizC+pWTIhjMjYcPeQc3Hh0OCgYt0cfQvQ2F0X42AJOYKNKO8lzEbET0grvz3t7+4k9OfOYLq&#13;
+DM1HO5CbCMfLrpQOAZ0qyZ9r2/LKO+hxgVKOtsTJNAVInkUHgubsQ1/zivbyXbxKGVcuWigZx2WN&#13;
+HToBXaY5PlqUb2gAwSrCFgjdZM3H2wE3iwy9RcFV+FjDlcMupkBR+FbIiVgy3Aq17X42VtG2YaB3&#13;
+zQFSPSQg2n3Y2YStUICtteIwdfMb+0E4Vz5uYg==</SignatureValue>
         <KeyInfo>
             <X509Data>
                 <X509Certificate>MIIJTjCCBzagAwIBAgIIJkW2GNGVIRkwDQYJKoZIhvcNAQELBQAwgbgxCzAJBgNVBAYTAkVTMUQw&#13;

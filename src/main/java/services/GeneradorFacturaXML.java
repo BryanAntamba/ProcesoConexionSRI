@@ -16,9 +16,8 @@ public class GeneradorFacturaXML {
     private static FacturaRepository facturaRepository = new FacturaRepositoryImple();
 
     public static String generarFacturaXML() throws Exception {
-        String claveAcceso;
+        String claveAcceso = null;
         try {
-            // Parámetros clave de acceso
             String fechaEmisionClave = "02062025";
             String tipoComprobante = "01";
             String ruc = "1719284752001";
@@ -48,7 +47,6 @@ public class GeneradorFacturaXML {
             factura.setAttribute("version", "2.0.0");
             doc.appendChild(factura);
 
-            // infoTributaria
             Element infoTributaria = doc.createElement("infoTributaria");
             factura.appendChild(infoTributaria);
             crearElemento(doc, infoTributaria, "ambiente", ambiente);
@@ -63,7 +61,6 @@ public class GeneradorFacturaXML {
             crearElemento(doc, infoTributaria, "secuencial", secuencial);
             crearElemento(doc, infoTributaria, "dirMatriz", "Av. Principal 123");
 
-            // infoFactura
             Element infoFactura = doc.createElement("infoFactura");
             factura.appendChild(infoFactura);
             crearElemento(doc, infoFactura, "fechaEmision", "02/06/2025");
@@ -74,18 +71,21 @@ public class GeneradorFacturaXML {
             crearElemento(doc, infoFactura, "totalSinImpuestos", "100.00");
             crearElemento(doc, infoFactura, "totalDescuento", "0.00");
 
+            // totalConImpuestos
+            // totalConImpuestos
             Element totalConImpuestos = doc.createElement("totalConImpuestos");
             infoFactura.appendChild(totalConImpuestos);
             Element totalImpuesto = doc.createElement("totalImpuesto");
             totalConImpuestos.appendChild(totalImpuesto);
             crearElemento(doc, totalImpuesto, "codigo", "2");
-            crearElemento(doc, totalImpuesto, "codigoPorcentaje", "2");
-            crearElemento(doc, totalImpuesto, "tarifa", "15");
+            crearElemento(doc, totalImpuesto, "codigoPorcentaje", "5"); // 5 = 15% IVA
+            // Add descuentoAdicional (even if it's 0.00) if it's expected by the XSD before baseImponible/tarifa
+            crearElemento(doc, totalImpuesto, "descuentoAdicional", "0.00"); // Add this line if your XSD expects it.
             crearElemento(doc, totalImpuesto, "baseImponible", "100.00");
-            crearElemento(doc, totalImpuesto, "valor", "12.00");
+            crearElemento(doc, totalImpuesto, "tarifa", "15"); // Move this line after baseImponible
+            crearElemento(doc, totalImpuesto, "valor", "15.00");
 
-
-            crearElemento(doc, infoFactura, "importeTotal", "112.00");
+            crearElemento(doc, infoFactura, "importeTotal", "115.00");
             crearElemento(doc, infoFactura, "moneda", "DOLAR");
 
             Element pagos = doc.createElement("pagos");
@@ -93,8 +93,9 @@ public class GeneradorFacturaXML {
             Element pago = doc.createElement("pago");
             pagos.appendChild(pago);
             crearElemento(doc, pago, "formaPago", "01");
-            crearElemento(doc, pago, "total", "112.00");
+            crearElemento(doc, pago, "total", "115.00");
 
+            // detalles
             // detalles
             Element detalles = doc.createElement("detalles");
             factura.appendChild(detalles);
@@ -107,18 +108,17 @@ public class GeneradorFacturaXML {
             crearElemento(doc, detalle, "descuento", "0.00");
             crearElemento(doc, detalle, "precioTotalSinImpuesto", "100.00");
 
+            // impuestos dentro de detalle (sin tarifa)
             Element impuestos = doc.createElement("impuestos");
             detalle.appendChild(impuestos);
             Element impuesto = doc.createElement("impuesto");
             impuestos.appendChild(impuesto);
             crearElemento(doc, impuesto, "codigo", "2");
-            crearElemento(doc, impuesto, "codigoPorcentaje", "2");
-            crearElemento(doc, impuesto, "tarifa", "12.00");
+            crearElemento(doc, impuesto, "codigoPorcentaje", "5"); // 15%
+            crearElemento(doc, impuesto, "tarifa", "15"); // Add this line and ensure order
             crearElemento(doc, impuesto, "baseImponible", "100.00");
-            crearElemento(doc, impuesto, "valor", "12.00");
+            crearElemento(doc, impuesto, "valor", "15.00");
 
-
-            // infoAdicional
             Element infoAdicional = doc.createElement("infoAdicional");
             factura.appendChild(infoAdicional);
             Element campoAdicional = doc.createElement("campoAdicional");
@@ -130,7 +130,7 @@ public class GeneradorFacturaXML {
             String rutaNoFirmado = "src/main/resources/XML/NoFirmados/factura.xml";
             guardarXML(doc, rutaNoFirmado);
 
-            // Firma
+            // Firmar XML
             String rutaFirmado = "src/main/resources/XML/Firmados/factura.xml";
             String keystorePath = "src/main/resources/certs/14045426_identity_1719284752.p12";
             String keystorePass = "Elvis2103";
