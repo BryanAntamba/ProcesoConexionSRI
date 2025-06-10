@@ -1,7 +1,7 @@
 package wssri;
 
-import ec.gob.sri.comprobantes.ws.recepcion.RecepcionComprobantesOfflineService;
-import ec.gob.sri.comprobantes.ws.recepcion.RespuestaSolicitud;
+import ec.gob.sri.ws.recepcion.RecepcionComprobantesOfflineService;
+import ec.gob.sri.ws.recepcion.RespuestaSolicitud;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -23,7 +23,7 @@ public class RecepcionComprobantesOffline {
             System.out.println("Archivo leído con éxito, tamaño: " + archivoBytes.length + " bytes.");
 
             RecepcionComprobantesOfflineService service = new RecepcionComprobantesOfflineService();
-            ec.gob.sri.comprobantes.ws.recepcion.RecepcionComprobantesOffline port = service.getRecepcionComprobantesOfflinePort();
+            ec.gob.sri.ws.recepcion.RecepcionComprobantesOffline port = service.getRecepcionComprobantesOfflinePort();
 
             RespuestaSolicitud respuesta = port.validarComprobante(archivoBytes);
             System.out.println("Respuesta del SRI recibida.");

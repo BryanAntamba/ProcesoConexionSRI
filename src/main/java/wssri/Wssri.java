@@ -1,8 +1,8 @@
 package wssri; // Define el paquete donde se encuentra esta clase
 
 // Importa clases necesarias para manipulación XML (SOAP) y manejo de errores
+import jakarta.xml.soap.*;
 import org.w3c.dom.NodeList;
-import javax.xml.soap.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
